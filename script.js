@@ -19,15 +19,16 @@ function generratetext()
 document.querySelector("#submit").addEventListener('click',(e)=>{
   
   text=document.querySelector("#text").value 
-  var timesRun = 0;
+  
   var startTime = new Date().getTime();
   var interval = setInterval(function(){
-      if(new Date().getTime() - startTime > 60000){
+    //after 30s
+      if(new Date().getTime() - startTime > 30000){
           clearInterval(interval);
           return;
       }
       //do whatever here..
       generratetext()
-  }, 2000);  
-}, 1000); 
+  }, 500);  
+
 })
